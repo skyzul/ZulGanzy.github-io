@@ -1,10 +1,10 @@
 var skorKamu = 0;
-var skorandy = 0;
+var skorzul = 0;
 var textKamu = document.getElementById('textKamu');
-var textandy = document.getElementById('textandy');
+var textzul = document.getElementById('textzul');
 
 textKamu.style.color = 'green';
-textandy.style.color = 'green';
+textzul.style.color = 'green';
 
 function check(user) {
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
@@ -60,7 +60,7 @@ function check(user) {
       break;
     case 'NOOB':
       warnaAlert = 'danger'
-      skorandy++;
+      skorzul++;
       break;
     case 'SERI':
       warnaAlert = 'primary'
@@ -68,21 +68,21 @@ function check(user) {
   }
   
   var skor = document.getElementById('skor');
-  skor.innerHTML = `${skorKamu} - ${skorandy}`;
-  if (skorKamu > skorandy){
+  skor.innerHTML = `${skorKamu} - ${skorzul}`;
+  if (skorKamu > skorzul){
     textKamu.style.fontWeight = 'bold';
-    textandy.style.fontWeight = '400';
+    textzul.style.fontWeight = '400';
     textKamu.style.color = 'green';
-    textandy.style.color = 'red';
-  }else if (skorKamu < skorandy){
-    textandy.style.fontWeight = 'bold';
+    textzul.style.color = 'red';
+  }else if (skorKamu < skorzul){
+    textzul.style.fontWeight = 'bold';
     textKamu.style.fontWeight = '400';
-    textandy.style.color = 'green';
+    textzul.style.color = 'green';
     textKamu.style.color = 'red';
   }else{
-    textandy.style.fontWeight = null;
+    textzul.style.fontWeight = null;
     textKamu.style.fontWeight = null;
-    textandy.style.color = 'blue';
+    textzul.style.color = 'blue';
     textKamu.style.color = 'blue';
   }
   
